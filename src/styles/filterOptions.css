@@ -1,0 +1,43 @@
+.filter-options {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Use full width by default */
+  max-width: 130px; /* Maximum width for larger screens */
+}
+
+.filter-options select {
+  width: 100%; /* Take full width of the container */
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none; /* Hide default arrow */
+  background: transparent; /* Remove default background */
+}
+
+.filter-options select:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+/* Add custom dropdown arrow */
+.filter-options::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333; /* Default arrow down */
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+
+.filter-options.open::after {
+  transform: translateY(-50%) rotate(180deg); /* Rotate arrow up */
+}

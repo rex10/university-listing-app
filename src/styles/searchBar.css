@@ -1,0 +1,28 @@
+.search-bar {
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  outline: none; 
+}
+
+.search-bar input:focus {
+  border-color: #007bff;
+}
+
+.search-bar .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1.2em;
+  cursor: pointer;
+}

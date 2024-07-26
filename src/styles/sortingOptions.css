@@ -1,0 +1,43 @@
+.sorting-options {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 130px;
+}
+
+.sorting-options select {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  appearance: none; 
+  cursor: pointer;
+  background: transparent;
+}
+
+.sorting-options select:focus {
+  border-color: #007bff; 
+}
+
+/* Add custom dropdown arrow */
+.sorting-options::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333; /* Default arrow down */
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.sorting-options.open::after {
+  transform: translateY(-50%) rotate(180deg); /* Rotate arrow up */
+}

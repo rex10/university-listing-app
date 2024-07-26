@@ -1,0 +1,119 @@
+.listing-container {
+  padding: 20px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.listing-container:hover {
+  transform: translateY(-5px);
+}
+
+.listing-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.control-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.control-label {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.controls button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+.university-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.university-list.grid-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.university-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.university-item:hover {
+  transform: translateY(-5px);
+}
+
+.university-item button {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.university-item button:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 768px) {
+  .listing-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .university-list.grid-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-container h1 {
+    font-size: 2rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .university-list {
+    gap: 10px;
+  }
+
+  .university-item {
+    width: 100%;
+  }
+}
